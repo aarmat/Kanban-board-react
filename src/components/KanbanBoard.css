@@ -1,0 +1,93 @@
+/* Apply white background to the entire page */
+body {
+  font-family: 'Arial', sans-serif; /* A clean font */
+  margin: 0;
+  padding: 0;
+  background-color:darkgray;
+}
+
+/* Kanban header styling */
+.kanban-header {
+  background-color: #3b5998; /* Dark blue header */
+  padding: 20px;
+  color: white;
+  display: flex;
+  justify-content: flex-start; /* Align elements to the left */
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+/* Header text (centered with flex-grow to push it to the middle) */
+.kanban-header h1 {
+  margin: 0;
+  font-size: 24px;
+  text-align: center;
+  flex-grow: 1; /* Force header to center with flexbox */
+  display: flex;
+  justify-content: center;
+}
+
+/* Controls for the dropdown button aligned to the left */
+.controls-container {
+  position: absolute;
+  left: 20px; /* Ensures the button stays on the extreme left */
+  top: 20px;
+}
+
+/* Styling for the dropdown button */
+.dropdown-button {
+  background-color: #ffcc00; /* Bright yellow button */
+  border: none;
+  padding: 10px 15px;
+  font-size: 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dropdown-button:hover {
+  background-color: #ffb700; /* Slightly darker yellow on hover */
+}
+
+/* Dropdown menu hidden by default */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  z-index: 1;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 160px; /* Wide enough to display full text */
+}
+
+/* Show dropdown menu on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Flexbox for positioning the columns */
+.columns-container {
+  display: flex;
+  gap: 20px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+/* Individual column styling */
+.kanban-column {
+  flex: 1;
+  min-width: 250px;
+  max-width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #fff; /* White background for each column */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for columns */
+}
